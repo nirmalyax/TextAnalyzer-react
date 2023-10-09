@@ -46,10 +46,10 @@ function App() {
     <>
       <Router>
           <Navbar home="Home" about="About" mode={mode} toggleMode={toggleMode}/>
-          <Alert alert={alert}/>
+          <Alert alert={alert} />
           <div className="container ">
             <Routes>
-              <Route path='/About' element={<About />}/>
+              <Route path='/About' element={<About mode={mode}/>}/>
               <Route path='/' element={
                 <Hero showAlert={showAlert} heading="Enter the text to analyse....." mode={mode}/>
               }/>
