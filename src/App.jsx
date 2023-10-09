@@ -51,7 +51,7 @@ function App() {
             <Routes>
               <Route path='/About' element={<About mode={mode}/>}/>
               <Route path='/' element={
-                <Hero showAlert={showAlert} heading="Enter the text to analyse....." mode={mode}/>
+                <Hero showAlert={showAlert} heading="Enter your text to analyse....." mode={mode}/>
               }/>
             </Routes>
           </div>

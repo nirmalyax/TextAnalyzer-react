@@ -62,7 +62,7 @@ export default function Hero(props) {
 
       <div className="container my-5" style={{color: props.mode==='dark'?'white':'#042743'}}>
         <h5 >Your text summary</h5>
-        <p>{text.split(" ").filter((e)=>{ return e.length !== 0}).length} <b>WORDS</b> || {text.length} <b>CHARACTERS</b> || <b>TIME TO READ</b> {0.008*text.length} min</p>
+        <p>{text.split(" ").filter((e)=>{ return e.length !== 0}).length} <b>WORDS</b> - {text.length} <b>CHARACTERS</b> - <b>TIME TO READ</b> {0.008*text.length} min</p>
         
         <h3>Preview</h3>
         <p>{text.length>0?text:"Enter something here to preview it"}</p>
