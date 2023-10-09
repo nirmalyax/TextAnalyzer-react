@@ -47,16 +47,16 @@ export default function Hero(props) {
         {/* All the buttons of the app */}
         <button disabled={text.length===0} className="btn btn-primary mx-3 my-3"  onClick={handleUPclick}>
 
-          UPPERCASE
+          Convert to UPPERCASE
         </button>
         <button disabled={text.length===0}  className="btn btn-info mx-3 my-3" onClick={handleLOclick}>
-          lowercase
+          Convert to lowercase
         </button>
-        <button disabled={text.length===0} className="btn btn-success mx-3 my-3" onClick={clear}>
-          Clear
+        <button disabled={text.length===0} className="btn btn-success mx-3 my-3" onClick={handleFirstletter}>
+         Capitalise Firstletter
         </button>
-        <button disabled={text.length===0} className="btn btn-danger mx-3 my-3" onClick={handleFirstletter}>
-         CapitaliseFirstletter
+        <button disabled={text.length===0} className="btn btn-danger mx-3 my-3" onClick={clear}>
+          Delete
         </button>
       </div>   
 
@@ -67,7 +67,7 @@ export default function Hero(props) {
         <h3>Preview</h3>
         <p>{text.length>0?text:"Enter something here to preview it"}</p>
       </div>
-
+      
     </>
   )
 }
