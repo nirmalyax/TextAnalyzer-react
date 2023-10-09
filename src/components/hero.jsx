@@ -45,24 +45,25 @@ export default function Hero(props) {
         </div>
 
         {/* All the buttons of the app */}
-        <button className="btn btn-primary" onClick={handleUPclick}>
+        <button disabled={text.length===0} className="btn btn-primary mx-3 my-3"  onClick={handleUPclick}>
+
           UPPERCASE
         </button>
-        <button className="btn btn-info mx-3" onClick={handleLOclick}>
+        <button disabled={text.length===0}  className="btn btn-info mx-3 my-3" onClick={handleLOclick}>
           lowercase
         </button>
-        <button className="btn btn-success " onClick={clear}>
+        <button disabled={text.length===0} className="btn btn-success mx-3 my-3" onClick={clear}>
           Clear
         </button>
-        <button className="btn btn-danger mx-3 " onClick={handleFirstletter}>
+        <button disabled={text.length===0} className="btn btn-danger mx-3 my-3" onClick={handleFirstletter}>
          CapitaliseFirstletter
         </button>
       </div>   
 
       <div className="container my-5" style={{color: props.mode==='dark'?'white':'#042743'}}>
-        <h2 >Your text summary</h2>
-        <p>{text.split(" ").length} words and {text.length} characters</p>
-        <p>{0.008*text.length} Minutes to read</p>
+        <h5 >Your text summary</h5>
+        <p>{text.split(" ").filter((e)=>{ return e.length !== 0}).length} <b>WORDS</b> || {text.length} <b>CHARACTERS</b> || <b>TIME TO READ</b> {0.008*text.length} min</p>
+        
         <h3>Preview</h3>
         <p>{text.length>0?text:"Enter something here to preview it"}</p>
       </div>
