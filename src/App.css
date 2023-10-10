@@ -1,12 +1,8 @@
-body {
-  margin: 0;
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(0, 0%, 10%);
-  line-height: 1.5;
-}
-.navbar{
-   background-color: aliceblue;
-}
-.heading{
-  color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
 }
